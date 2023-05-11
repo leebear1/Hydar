@@ -20,7 +20,7 @@ client.on('messageCreate', (message) => {
         return
     }
 
-    if (message.content === 'ping','Ping'){
+    if (message.content === 'ping'){
         message.reply('pong');
     }
 });
@@ -30,7 +30,7 @@ client.on('messageCreate', (message) => {
         return
     }
 
-    if (message.content === 'meow','Meow','nya','Nya'){
+    if (message.content === 'meow'){
         message.reply('darn furries');
     }
 });
@@ -40,7 +40,7 @@ client.on('messageCreate', (message) => {
         return
     }
 
-    if (message.content === 'hydar','Hydar'){        
+    if (message.content === 'hydar'){        
         message.react('<:hydar:1105768332566736916>')        
     }
 });
