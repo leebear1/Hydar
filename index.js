@@ -43,6 +43,16 @@ client.on('messageCreate', (message) => {
     return
   }
 
+  if (message.content === 'bing') {
+    message.reply('chilling 🥶🥶🥶');
+  }
+});
+
+client.on('messageCreate', (message) => {
+  if (message.author.bot) {
+    return
+  }
+
   if (message.content === 'hydar') {
     message.react('<:hydar:1105768332566736916>')
   }
