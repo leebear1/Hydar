@@ -12,7 +12,7 @@ const client = new Client({
 })
 
 client.on('ready', (c) => {
-    console.log('Skynuts has awoken')
+    console.log('Hydar has awoken')
 });
 
 client.on('messageCreate', (message) => {
