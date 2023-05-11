@@ -1,8 +1,12 @@
 require('dotenv').config();
-const { Client, IntentsBitField } = require('discord.js');
+const { Client, IntentsBitField, REST, Routes } = require('discord.js');
 
 const keepAlive = require("./server");
+
+
 keepAlive();
+
+const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
 const client = new Client({
   intents: [
@@ -16,16 +20,6 @@ const client = new Client({
 
 client.on('ready', (c) => {
   console.log('Hydar has awoken')
-});
-
-client.on('messageCreate', (message) => {
-  if (message.author.bot) {
-    return
-  }
-
-  if (message.content === 'ping') {
-    message.reply('pong');
-  }
 });
 
 client.on('messageCreate', (message) => {
@@ -58,4 +52,5 @@ client.on('messageCreate', (message) => {
   }
 });
 
-client.login(process.env.wwww);
+
+client.login(process.env.TOKEN);
