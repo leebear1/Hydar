@@ -40,8 +40,8 @@ client.on('messageCreate', (message) => {
         return
     }
 
-    if (message.content === 'hydar'){
-        message.react(message.guild.emojis.cache.get('1105768332566736916'))
+    if (message.content === 'hydar'){        
+        message.react('<:hydar:1105768332566736916>')        
     }
 });
 
