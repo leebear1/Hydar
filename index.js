@@ -53,12 +53,12 @@ client.on('messageCreate', (message) => {
 client.on('interactionCreate', (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'hey') {
-    return interaction.reply('hey!');
+  if (interaction.commandName === 'crop') {
+    return interaction.reply('Hydar knows the best crop is cacti :D <:cacti:1106497136222285835>');
   }
 
-  if (interaction.commandName === 'ping') {
-    return interaction.reply('Pong!');
+  if (interaction.commandName === 'bing') {
+    return interaction.reply('https://tenor.com/view/bing-gif-25601964');
   }
 });
 
