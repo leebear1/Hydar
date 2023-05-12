@@ -6,8 +6,6 @@ const keepAlive = require("./server");
 
 keepAlive();
 
-const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
-
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -52,5 +50,16 @@ client.on('messageCreate', (message) => {
   }
 });
 
+client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'hey') {
+    return interaction.reply('hey!');
+  }
+
+  if (interaction.commandName === 'ping') {
+    return interaction.reply('Pong!');
+  }
+});
 
 client.login(process.env.TOKEN);
