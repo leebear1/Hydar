@@ -1,11 +1,6 @@
 require('dotenv').config();
 const { Client, IntentsBitField, REST, Routes } = require('discord.js');
 
-const keepAlive = require("./server");
-
-
-keepAlive();
-
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
