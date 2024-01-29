@@ -9,6 +9,8 @@ Meow- If you say "meow", Hydar says "darn furries"
 
 Hydar- If you say "hydar", Hydar reacts with the hydar emoji
 
+Silly- If you say "silly", Hydar reacts with the silly emoji
+
 /Crop- If you use /crop, Hydar replies with "Hydar knows the best crop is cacti :D"
 
 /Bing- If you use /bing, Hydar replies of a gif of bing chilling
