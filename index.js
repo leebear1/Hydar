@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Client, IntentsBitField, REST, Routes } = require('discord.js');
 
-const keep_alive = require('./keep_alive.js')
+//const keep_alive = require('./keep_alive.js')
 
 const client = new Client({
   intents: [
@@ -25,31 +25,13 @@ client.on('messageCreate', (message) => {
   if (message.content === 'meow') {
     message.reply('darn furries');
   }
-});
-
-client.on('messageCreate', (message) => {
-  if (message.author.bot) {
-    return
-  }
 
   if (message.content.toLowerCase() === 'bing') {
     message.reply('chilling 🥶🥶🥶');
   }
-});
-
-client.on('messageCreate', (message) => {
-  if (message.author.bot) {
-    return
-  }
 
   if (message.content.toLowerCase() === 'hydar') {
     message.react('<:hydar:1105768332566736916>')
-  }
-});
-
-client.on('messageCreate', (message) => {
-  if (message.author.bot) {
-    return
   }
 
   if (message.content.toLowerCase() === 'silly') {
@@ -73,6 +55,10 @@ client.on('interactionCreate', (interaction) => {
     const num2 = interaction.options.get('second-number').value;
 
     interaction.reply(`The sum is ${num1 + num2}`);
+  }
+  if (interaction.commandName === 'time') {
+    const currentDate = new Date();
+    interaction.reply(`The time is ${currentDate.toLocaleString()}`);
   }
 });
 
