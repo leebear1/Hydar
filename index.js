@@ -50,15 +50,31 @@ client.on('interactionCreate', (interaction) => {
     return interaction.reply('https://tenor.com/view/bing-gif-25601964');
   }
 
+  if (interaction.commandName === 'time') {
+    const currentDate = new Date();
+    interaction.reply(`The time is ${currentDate.toLocaleString()}`);
+  }
+  
   if (interaction.commandName === 'add') {
     const num1 = interaction.options.get('first-number').value;
     const num2 = interaction.options.get('second-number').value;
 
     interaction.reply(`The sum is ${num1 + num2}`);
   }
-  if (interaction.commandName === 'time') {
-    const currentDate = new Date();
-    interaction.reply(`The time is ${currentDate.toLocaleString()}`);
+  if (interaction.commandName === 'calculate-games-played') {
+    const num1 = interaction.options.get('games-played').value;
+    const num2 = interaction.options.get('pd').value;
+    const num3 = num2 / num1
+
+    function roundNum(number){
+      return +(Math.round(number + "e+2") + "e-2");
+   }
+    const n49 = roundNum(num3*49)
+    const n50 = roundNum(num3*50)
+    const n51 = roundNum(num3*51)
+    const n52 = roundNum(num3*52)
+
+    interaction.reply(`49: ${n49}\n50: ${n50}\n51: ${n51}\n52: ${n52}`);
   }
 });
 
