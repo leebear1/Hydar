@@ -1,6 +1,8 @@
 require('dotenv').config();
 const { Client, IntentsBitField, REST, Routes } = require('discord.js');
 
+const keep_alive = require('./keep_alive.js')
+
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -30,7 +32,7 @@ client.on('messageCreate', (message) => {
     return
   }
 
-  if (message.content === 'bing') {
+  if (message.content.toLowerCase() === 'bing') {
     message.reply('chilling 🥶🥶🥶');
   }
 });
@@ -40,8 +42,18 @@ client.on('messageCreate', (message) => {
     return
   }
 
-  if (message.content === 'hydar') {
+  if (message.content.toLowerCase() === 'hydar') {
     message.react('<:hydar:1105768332566736916>')
+  }
+});
+
+client.on('messageCreate', (message) => {
+  if (message.author.bot) {
+    return
+  }
+
+  if (message.content.toLowerCase() === 'silly') {
+    message.react('<:silly:1201329675214004264>')
   }
 });
 
