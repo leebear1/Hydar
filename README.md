@@ -13,7 +13,11 @@ Hydar- If you say "hydar", Hydar reacts with the hydar emoji
 
 /Bing- If you use /bing, Hydar replies of a gif of bing chilling
 
-/Add If you use /add and 2 numbers, Hydar replies with the sum of the 2 inputted numbers
+/Add-  If you use /add and 2 numbers, Hydar replies with the sum of the 2 inputted numbers
+
+/Time- If you use /time, Hydar tells you the time in UTC
+
+/Bigwin-Pace- If you use /bigwin-pace, Hydar does something to do with bigwin idfk
 
 
 
