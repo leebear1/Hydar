@@ -12,6 +12,10 @@ const commands = [
     description: 'Bing',
   },
   {
+    name: 'time',
+    description: 'what the time is in UTC',
+  },
+  {
     name: 'add',
     description: 'Adds two numbers.',
     options: [
@@ -30,8 +34,22 @@ const commands = [
     ]
   },
   {
-    name: 'time',
-    description: 'what the time is in UTC',
+    name: 'bigwin-pace',
+    description: 'Bigwin Pace Calculator',
+    options: [
+      {
+        name: 'games-played',
+        description: 'Games Played',
+        type: ApplicationCommandOptionType.Number,
+        required: true,
+      },
+      {
+        name: 'pd',
+        description: 'PD',
+        type: ApplicationCommandOptionType.Number,
+        required: true
+      }
+    ]
   }
 ];
 
