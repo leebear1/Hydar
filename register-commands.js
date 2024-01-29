@@ -32,12 +32,6 @@ const commands = [
   {
     name: 'time',
     description: 'what the time is in UTC',
-    options: [
-      {
-        name: 'sport-selected',
-        description: 'The selected sport',
-      }
-    ]
   }
 ];
 
